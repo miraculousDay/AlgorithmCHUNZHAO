@@ -6,6 +6,7 @@ import java.util.Stack;
  * leetcode链接：
  * https://leetcode-cn.com/problems/valid-parentheses/
  *
+ * 解题思路：
  * 1.用stack，利用先进后出的特性
  * @see #isValid(String)
  *

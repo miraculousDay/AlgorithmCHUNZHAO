@@ -92,12 +92,4 @@ public class MergeTwoLists {
         }
     }
 
-    public ListNode reverseList(ListNode head) {
-        ListNode newHead = null;
-        while (head != null) {
-            newHead = new ListNode(head.val, newHead);
-            head = head.next;
-        }
-        return newHead;
-    }
 }

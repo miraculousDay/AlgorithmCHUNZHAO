@@ -11,16 +11,18 @@ import java.util.List;
  * 解题思路：
  * 1.暴力求解，三层for循环
  *
- * @author : tanyu
- * create at:  2021-01-23  10:43
- * @description: 三数之和
- * @see #threeSum_1(int[])
- *
  * 2.使用hash
  * @see #threeSum_2(int[])
  *
  * 3.双指针，左右夹逼方法
  * @see #threeSum_3(int[])
+ *
+ * @author : tanyu
+ * create at:  2021-01-23  10:43
+ * @description: 三数之和
+ * @see #threeSum_1(int[])
+ *
+
  */
 public class ThreeSum {
 

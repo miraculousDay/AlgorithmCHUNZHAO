@@ -12,6 +12,7 @@ import java.util.Map;
  * 1.暴力破解，双for循环求解
  * @see #twoSum_1(int[], int)
  * 2.使用hash
+ * @see #twoSum_2(int[], int)
  *
  * @author : tanyu
  * create at:  2021-01-23  10:09

@@ -8,15 +8,16 @@ import java.util.Arrays;
  *
  * 解题思路：
  * 1.增加一个临时的数组保存源数组，然后根据位移后的下标在临时数组中放入元素
+ * @see #rotate_1(int[], int)
+ *
+ * 2.先整体反转，然后将0 - k-1 元素再反转，然后将k - nums.length反转。
+ * 详细解析
+ * @see #rotate_2(int[], int)
  *
  * @author : tanyu
  * create at:  2021-01-24  14:33
  * @description: 旋转数组
- * @see #rotate_1(int[], int)
- * <p>
- * 2.先整体反转，然后将0 - k-1 元素再反转，然后将k - nums.length反转。
- * 详细解析
- * @see #rotate_2(int[], int)
+ *
  */
 public class Rotate {
 
@@ -73,9 +74,6 @@ public class Rotate {
     public static void reverse(int[] source, int begin, int end) {
         if (source == null || source.length == 0) {
             return;
-        }
-        if (source.length <= end) {
-            end = source.length - 1;
         }
         while (begin < end) {
             int temp = source[begin];

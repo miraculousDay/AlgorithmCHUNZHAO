@@ -36,7 +36,7 @@ public class RemoveDuplicates {
         }
         for (int j = 1; j < nums.length; j++) {
             //不重复则，直接覆盖值
-            if (nums[j] == nums[i]) {
+            if (nums[j] != nums[i]) {
                 nums[++i] = nums[j];
             }
         }

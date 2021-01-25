@@ -21,7 +21,7 @@ package homework;
 public class MergeTwoLists {
 
     /**
-     * 时间复杂度：O(n + m))   m：表示l1的节点个数  n：表示l2的节点个数
+     * 时间复杂度：O(n + m)   m：表示l1的节点个数  n：表示l2的节点个数
      * 空间复杂度：O(1)
      *
      * @param l1

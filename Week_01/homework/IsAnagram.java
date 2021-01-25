@@ -15,7 +15,7 @@ import java.util.Map;
  * @see #isAnagram_1(String, String)
  *
  * 2.使用hash，保存第一个字符串中出现过字符的次数，然后在第二个字符串比对，存在某个字符则将值减一
- * @see #
+ * @see #isAnagram_2(String, String)
  *
  * @author : tanyu
  * create at:  2021-01-24  19:21

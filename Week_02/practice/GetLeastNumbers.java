@@ -1,7 +1,6 @@
 package practice;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -24,6 +23,13 @@ import java.util.Queue;
  * @description: 最小的k个数
  */
 public class GetLeastNumbers {
+
+    private static int[] testData = new int[]{1, 2, 3};
+
+    public static void main(String[] args) {
+        GetLeastNumbers d = new GetLeastNumbers();
+        d.getLeastNumbers_3(testData, 2);
+    }
 
     /**
      * 时间复杂度：O(n)

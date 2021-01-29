@@ -15,7 +15,7 @@ import java.util.Stack;
  * 2.迭代，使用stack维护前序遍历顺序s
  * @see #preorderTraversal_2(InorderTraversal.TreeNode)
  *
- * 3.迭代2
+ * 3.迭代2,使用双端队列维护，该方法后都可以使用，注意入栈顺序即可
  * @see #preorderTraversal_3(InorderTraversal.TreeNode)
  *
  * @author : tanyu

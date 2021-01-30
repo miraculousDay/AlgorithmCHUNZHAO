@@ -37,10 +37,11 @@ public class Preorder {
         ArrayDeque<Postorder.Node> stack = new ArrayDeque<>();
         stack.add(root);
         while (!stack.isEmpty()) {
+            // 拿尾部节点
             Postorder.Node node = stack.pollLast();
             result.add(node.val);
-            // 左节点在list的下标在尾部
             if (node.children != null && node.children.size() > 0) {
+                // 右节点先进去队列，左节点后进入队列
                 for (int i = node.children.size() - 1; i >=0; i--) {
                     stack.add(node.children.get(i));
                 }

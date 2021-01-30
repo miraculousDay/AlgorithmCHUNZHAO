@@ -1,5 +1,7 @@
 package homework;
 
+import sun.awt.image.ImageWatched;
+
 import java.util.*;
 
 /**
@@ -35,10 +37,11 @@ public class Postorder {
         ArrayDeque<Node> stack = new ArrayDeque<>();
         stack.add(root);
         while (!stack.isEmpty()) {
+            // 尾部拿节点
             Node node = stack.pollLast();
             // 每次的节点值从头部加入，保证遍历顺序
             result.addFirst(node.val);
-            // 遍历子节点,右节点在List下标靠前的位置
+            // 遍历子节点
             for (Node item : node.children) {
                 if (item != null) {
                     stack.add(item);

@@ -83,13 +83,17 @@ public class UniquePaths {
      * @return
      */
     public static int uniquePaths_1(int m, int n) {
+        // 先创建数组保存走到每一个格子的路径数
         int[][] arr = new int[m][n];
+        // 第一列移动可走动的次数一定是1，规则限定只能向右或向下移动
         for (int i = 0; i < m; i++) {
             arr[i][0] = 1;
         }
+        // 第一行移动可走动的次数一定是1，规则限定只能向右或向下移动
         for (int i = 0; i < n; i++) {
             arr[0][i] = 1;
         }
+        // 处理除开第一行、第一列的格子
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
                 arr[i][j] = arr[i - 1][j] + arr[i][j - 1];

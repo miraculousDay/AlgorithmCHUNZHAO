@@ -94,6 +94,7 @@ public class UniquePathsWithObstacles {
         }
         for (int i = 1; i < row; i++) {
             for (int j = 1; j < col; j++) {
+                // 不是障碍物则f(i, j) = f(i + 1, j) + f(i, j + 1)
                 if (obstacleGrid[i][j] == 0) {
                     dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
                 }

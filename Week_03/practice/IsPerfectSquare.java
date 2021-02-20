@@ -26,6 +26,9 @@ public class IsPerfectSquare {
     /**
      * 时间复杂度：O(logn)
      * 空间复杂度：O(1)
+     * 此方法效率优于二分查找
+     * 此方法牛顿迭代方法模板为：x为输入的求解值
+     * (a + x / a) / 2
      *
      * @param num
      * @return
@@ -62,6 +65,7 @@ public class IsPerfectSquare {
         long mid = 1;
         while (left <= right) {
             mid = left + (right - left) / 2;
+            // 判断是否相等，处理左右边界的值
             if (mid * mid > num) {
                 right = mid - 1;
             } else if (mid * mid < num) {

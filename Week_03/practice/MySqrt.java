@@ -21,7 +21,7 @@ package practice;
 public class MySqrt {
 
     public static void main(String[] args) {
-        System.out.println(mySqrt_2(9));
+        System.out.println(mySqrt_1(4));
     }
 
     /**
@@ -44,9 +44,9 @@ public class MySqrt {
             mid = left + (right - left) / 2;
             // 比较中间值的平方是否大于x
             if (mid * mid > x) {
-                right = right - 1;
+                right = mid - 1;
             } else {
-                left = left + 1;
+                left = mid + 1;
             }
         }
         return (int) right;

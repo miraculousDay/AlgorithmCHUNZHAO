@@ -6,6 +6,9 @@ package practice;
  *
  * 解题思路
  * 1.二分查找，此题中二维数组中每个数组元素都是有序的，因此可以采用二分查找
+ * A.数组内容存在上下界，数组内容的有限
+ * B.单调性，每个数组中的值都是单调递增的
+ * C.数组可通过下标获取值
  * @see #searchMatrix(int[][], int)
  *
  * @author : tanyu
@@ -26,12 +29,13 @@ public class SearchMatrix {
         int right = row * col - 1;
         int mid = 0;
         while (left <= right) {
-            // 中间值
+            // 中间值，
             mid = left + (right - left) / 2;
             // mid / col获取行  mid % col获取列
             if (matrix[mid / col][mid % col] == target) {
                 return true;
             }
+            // 值过大，则缩小有边界
             if (matrix[mid / col][mid % col] > target) {
                 right = mid - 1;
             } else {

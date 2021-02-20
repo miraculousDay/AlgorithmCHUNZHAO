@@ -25,7 +25,7 @@ public class Search {
      * 时间复杂度：O(logn)
      * 空间复杂度：O(1)
      *
-     * 暂为理解 TODO
+     * 暂未理解 TODO
      *
      * @param nums
      * @param target
@@ -52,6 +52,7 @@ public class Search {
      * @return
      */
     public int search_1(int[] nums, int target) {
+        // 异常参数判断
         if (nums == null || nums.length == 0) {
             return -1;
         }
@@ -59,11 +60,13 @@ public class Search {
         int right = nums.length - 1;
         int mid = 1;
         while (left <= right) {
+            // 防止下标越界
             mid = left + (right - left) / 2;
+            // 先判断下是否找到目标值
             if (nums[mid] == target) {
                 return mid;
             }
-            // 前半段有序
+            // 判断是不是前半段有序
             if (nums[left] <= nums[mid]) {
                 // 确定值是否在前半段
                 if (target >= nums[left] && target < nums[mid]) {

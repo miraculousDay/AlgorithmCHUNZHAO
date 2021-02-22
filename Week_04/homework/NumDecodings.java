@@ -17,6 +17,10 @@ package homework;
  */
 public class NumDecodings {
 
+    public static void main(String[] args) {
+        System.out.println(numDecodings_1("27"));
+    }
+
     /**
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
@@ -24,7 +28,7 @@ public class NumDecodings {
      * @param s
      * @return
      */
-    public int numDecodings_1(String s) {
+    public static int numDecodings_1(String s) {
         if (s == null || s.length() == 0) {
             return 0;
         }
@@ -42,7 +46,7 @@ public class NumDecodings {
                 dp[i] += dp[i - 1];
             }
             // 前两个字符为10-26之间，则dp[i] += dp[i - 2]
-            if (second >= 10 && first <= 26) {
+            if (second >= 10 && second   <= 26) {
                 dp[i] += dp[i - 2];
             }
         }

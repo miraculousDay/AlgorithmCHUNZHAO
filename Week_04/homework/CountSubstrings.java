@@ -19,6 +19,13 @@ package homework;
  */
 public class CountSubstrings {
 
+    /**
+     * 时间复杂度：O(n2)
+     * 空间复杂度：O(n2)
+     *
+     * @param s
+     * @return
+     */
     public int countSubstrings_1(String s) {
         // 异常参数处理
         if (s == null || s.length() == 0) {
@@ -27,31 +34,15 @@ public class CountSubstrings {
         int res = 0;
         // dp状态
         boolean[][] dp = new boolean[s.length()][s.length()];
-        for (int i = 0; i < s.length(); i++) {
-            for (int j = 0; j <= i; j++) {
-                if (s.charAt(i) == s.charAt(j) && (i - j < 2 || dp[i - 1][j + 1])) {
+        for (int j = 0; j < s.length(); j++) {
+            for (int i = 0; i <= j; i++) {
+                // j为较大值，所以j - i < 2时候表示该子字符串长度小于等2， 子字符串距离应该为 i + 1 到 j - 1
+                if (s.charAt(j) == s.charAt(i) && (j - i < 2 || dp[i + 1][j - 1])) {
                     dp[i][j] = true;
                     res++;
                 }
             }
         }
         return res;
-
-
-//        // 动态规划法
-//        boolean[][] dp = new boolean[s.length()][s.length()];
-//        int ans = 0;
-//
-//        for (int j = 0; j < s.length(); j++) {
-//            for (int i = 0; i <= j; i++) {
-//                if (s.charAt(i) == s.charAt(j) && (j - i < 2 || dp[i + 1][j - 1])) {
-//                    dp[i][j] = true;
-//                    ans++;
-//                }
-//            }
-//        }
-//
-//        return ans;
-
     }
 }

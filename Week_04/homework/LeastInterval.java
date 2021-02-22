@@ -22,6 +22,14 @@ import java.util.Arrays;
  */
 public class LeastInterval {
 
+    /**
+     * 时间复杂度：O(nlogn)
+     * 空间复杂度：O(n)
+     *
+     * @param tasks
+     * @param n
+     * @return
+     */
     public int leastInterval_1(char[] tasks, int n) {
         // 异常参数处理
         if (tasks == null || tasks.length == 0) {

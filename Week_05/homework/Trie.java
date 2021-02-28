@@ -1,4 +1,4 @@
-package practice;
+package homework;
 
 /**
  * LeetCode链接：

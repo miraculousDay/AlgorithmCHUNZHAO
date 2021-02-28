@@ -1,7 +1,5 @@
 package homework;
 
-import practice.Trie;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +8,8 @@ import java.util.List;
  * https://leetcode-cn.com/problems/word-search-ii/
  *
  * 解题思路：
- *
+ * 1.并查集加dfs
+ * @see #findWords(char[][], String[])
  *
  * @author : tanyu
  * create at:  2021-02-24 16:20

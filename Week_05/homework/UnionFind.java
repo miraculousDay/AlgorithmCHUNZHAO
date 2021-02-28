@@ -1,7 +1,12 @@
-package practice;
+package homework;
 
 /**
- * 并查集实例
+ * LeetCode链接
+ * https://leetcode-cn.com/problems/number-of-provinces/
+ *
+ * 解题思路：
+ * 1.并查集实例
+ * @see #findCircleNum(int[][])
  *
  * @author : tanyu
  * create at:  2021-02-24 19:54
@@ -53,8 +58,8 @@ public class UnionFind {
 
 
     /**
-     * LeetCode链接
-     * https://leetcode.com/problems/number-of-provinces/
+     * 时间复杂度：O(n2)
+     * 空间复杂度：O(n)
      *
      * @param grid
      * @return
